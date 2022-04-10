@@ -1,10 +1,17 @@
-# Spring120322
+# Repositório da turma de Spring (120322) na Fuctura
+## Instrutor: @ericmoraess
 
 # Eclipse:
 https://www.eclipse.org/downloads/packages/
 
 # Lombok:
 https://projectlombok.org/download
+
+# Spring Projects:
+https://spring.io/projects
+
+# Spring Reference Docs:
+https://docs.spring.io/spring-boot/docs/current/reference/html/
 
 # Spring Initializr:
 https://start.spring.io/
