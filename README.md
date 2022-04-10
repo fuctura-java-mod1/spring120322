@@ -1,10 +1,13 @@
-# spring120322
+# Spring120322
 
 # Eclipse:
 https://www.eclipse.org/downloads/packages/
 
 # Lombok:
 https://projectlombok.org/download
+
+# Spring Initializr:
+https://start.spring.io/
 
 # Thymeleaf:
 https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#introducing-thymeleaf
