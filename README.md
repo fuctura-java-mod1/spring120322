@@ -19,7 +19,7 @@ https://docs.spring.io/spring-boot/docs/current/reference/html/
 # Spring Initializr:
 https://start.spring.io/
 
-# DBEaver:
+# DBEeaver:
 https://dbeaver.io/download/
 
 # Thymeleaf:
