@@ -1,6 +1,9 @@
 # Repositório da turma de Spring (120322) na Fuctura
 ## Instrutor: @ericmoraess
 
+# JDK:
+https://www.oracle.com/java/technologies/downloads/#jdk18-windows
+
 # Eclipse:
 https://www.eclipse.org/downloads/packages/
 
@@ -15,6 +18,9 @@ https://docs.spring.io/spring-boot/docs/current/reference/html/
 
 # Spring Initializr:
 https://start.spring.io/
+
+# DBEaver:
+https://dbeaver.io/download/
 
 # Thymeleaf:
 https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#introducing-thymeleaf
