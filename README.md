@@ -28,6 +28,9 @@ https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#introducing-thym
 # Posições:
 https://www.researchgate.net/figure/Figura-1-Representacao-das-posicoes-de-jogadores-em-campo-de-futebol-G-Goleiro-Z_fig1_326353906
 
+# HTML:
+https://developer.mozilla.org/pt-BR/docs/Web/HTML
+
 # Atividade 1 
 
 ### 1 - Vamos criar um CRUD para a nossa classe Jogador
@@ -74,4 +77,5 @@ https://www.researchgate.net/figure/Figura-1-Representacao-das-posicoes-de-jogad
 - Prazo: 18/04/22
 - Formas de entrega: GitHub ou Google Drive
 - 1 Ponto extra será dado para os alunos que enviar via Github
+- Link de entrega: https://forms.gle/BVk47wzjirjkfwuE7
 
