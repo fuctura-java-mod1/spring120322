@@ -30,7 +30,7 @@ https://www.researchgate.net/figure/Figura-1-Representacao-das-posicoes-de-jogad
 
 # Atividade 1 
 
-### Vamos criar um CRUD para a nossa classe Jogador
+### 1 - Vamos criar um CRUD para a nossa classe Jogador
 
 ##### criar um controller :
 
@@ -66,3 +66,12 @@ https://www.researchgate.net/figure/Figura-1-Representacao-das-posicoes-de-jogad
 		</nav>
 	</div>
 ```
+
+### 2 - Adicione a seguinte dependência no seu projeto: 
+- Spring Boot DevTools
+
+### 3 - Entrega da atividade:
+- Prazo: 18/04/22
+- Formas de entrega: GitHub ou Google Drive
+- 1 Ponto extra será dado para os alunos que enviar via Github
+
