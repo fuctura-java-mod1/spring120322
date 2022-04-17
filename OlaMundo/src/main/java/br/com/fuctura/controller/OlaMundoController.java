@@ -22,7 +22,6 @@ public class OlaMundoController {
 		j.setImg("https://thumbs.dreamstime.com/b/lionel-messi-goal-celebration-celebrates-positive-emotion-reaction-thankful-pointing-poins-points-fingers-sky-god-religion-number-129917731.jpg");
 		
 		model.addAttribute("jogador", j);
-		model.addAttribute("tituloDaPagina", "Fuctura-Model");
 		
 		return "inicial";
 	}
