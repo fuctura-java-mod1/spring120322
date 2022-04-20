@@ -1,27 +1,35 @@
 package br.com.fuctura.controller;
 
+
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import br.com.fuctura.model.Jogador;
+import br.com.fuctura.repository.JogadorRepository;
+
+import java.util.Optional;
 
 @Controller
 public class OlaMundoController {
+	
+	@Autowired
+	JogadorRepository repository; //injetado
 	
 	//
 	@GetMapping("/inicial")
 	public String getInicial(Model model) {
 		
-		///instanciei 1 jogador
-		Jogador j = new Jogador();
-		j.setNome("Messi");
-		j.setIdade(20);
-		j.setPeso(90.0);
-		j.setAltura(1.87);
-		j.setImg("https://thumbs.dreamstime.com/b/lionel-messi-goal-celebration-celebrates-positive-emotion-reaction-thankful-pointing-poins-points-fingers-sky-god-religion-number-129917731.jpg");
+		Optional<Jogador> jogador = repository.findById(1L);
+			
+		if(jogador.isPresent()) {
+			model.addAttribute("jogador", jogador.get());
+		}
 		
-		model.addAttribute("jogador", j);
+		
+		model.addAttribute("tituloDaPagina", "");
 		
 		return "inicial";
 	}
