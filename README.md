@@ -1,52 +1,23 @@
 # Repositório da turma de Spring (120322) na Fuctura
 ## Instrutor: @ericmoraess
 
-# JDK:
-https://www.oracle.com/java/technologies/downloads/#jdk18-windows
+# H2:
+http://www.h2database.com/html/features.html#database_only_if_exists
 
-# Eclipse:
-https://www.eclipse.org/downloads/packages/
+# JPA
 
-# Lombok:
-https://projectlombok.org/download
+https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#preface
 
-# Spring Projects:
-https://spring.io/projects
+# Atividade 2 
 
-# Spring Reference Docs:
-https://docs.spring.io/spring-boot/docs/current/reference/html/
+### 1 - Utilizando o JogadorController (Atividade 1)
 
-# Spring Initializr:
-https://start.spring.io/
+##### criar a rota abaixo:
 
-# DBeaver:
-https://dbeaver.io/download/
+- /jogador/listar/todos
 
-# Thymeleaf:
-https://www.thymeleaf.org/doc/tutorials/3.0/usingthymeleaf.html#introducing-thymeleaf
-
-# Posições:
-https://www.researchgate.net/figure/Figura-1-Representacao-das-posicoes-de-jogadores-em-campo-de-futebol-G-Goleiro-Z_fig1_326353906
-
-# Atividade 1 
-
-### 1 - Vamos criar um CRUD para a nossa classe Jogador
-
-##### criar um controller :
-
-- JogadorController
-
-
-##### criar as rotas abaixo:
-
-- /jogador/cadastrar
-- /jogador/listar
-- /jogador/atualizar
-- /jogador/excluir
-
-1. cada rota deve exibir uma página com títulos diferentes. 
-2. Em cada página adicione o **Bootstrap** dentro da tag html **head** 
-3. dentro da tag html **body** cole o seguinte conteúdo:
+1. Utilize o método **findAll()** para recuperar todos os jogadores
+2. Adicione o HTML abaixo na sua página:
 
 ```html
 <div>
@@ -65,13 +36,27 @@ https://www.researchgate.net/figure/Figura-1-Representacao-das-posicoes-de-jogad
 		  </div>
 		</nav>
 	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col col-md-3" th:each="jogador : ${jogadores}">
+				<div>
+					<p>Nome: <span th:text=${jogador.nome}>???</span></p>
+					<p>Idade:<span th:text=${jogador.idade}>???</span></p>
+					<p>Altura:<span>???</span></p>
+					<p>Peso:<span>???</span></p>
+					<img th:src=${jogador.img}> 
+				</div>
+			</div>
+		</div>
+	</div>
 ```
 
-### 2 - Adicione a seguinte dependência no seu projeto: 
-- Spring Boot DevTools
+### 2 - Pesquise e estude sobre (não precisa entregar): 
+- th:each
+- formulários HTML
+- Métodos HTTP
 
 ### 3 - Entrega da atividade:
-- Prazo: 18/04/22
-- Formas de entrega: GitHub ou Google Drive
+- Prazo: 26/04/22 (23:59)
+- Formas de entrega: **GitHub** ou **Google Drive**
 - 1 Ponto extra será dado para os alunos que enviar via Github
-
