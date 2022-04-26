@@ -10,6 +10,11 @@ import javax.persistence.Table;
 @Table(name = "jogador")
 public class Jogador {
 	
+	public Jogador(String nome) {
+		System.out.println("Construindo uma instancia do Jogador: " + nome);
+		this.nome = nome;
+	}
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;

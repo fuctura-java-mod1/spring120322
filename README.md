@@ -1,62 +1,43 @@
 # Repositório da turma de Spring (120322) na Fuctura
 ## Instrutor: @ericmoraess
 
-# H2:
-http://www.h2database.com/html/features.html#database_only_if_exists
+### Spring IOC (Inversion of Control) Container  
 
-# JPA
+<img src="https://docs.spring.io/spring-framework/docs/4.1.x/spring-framework-reference/html/images/container-magic.png">
 
-https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#preface
+- No Spring, os objetos que formam a espinha dorsal do seu aplicativo e que são gerenciados pelo contêiner Spring IoC são chamados de beans. Um bean é um objeto que é instanciado, montado e gerenciado por um contêiner Spring IoC.
 
-# Atividade 2 
+- Quando definimos um bean com **escopo singleton**, o contêiner cria uma única instância desse bean; todas as solicitações para esse nome de bean retornarão o mesmo objeto, que é armazenado em cache. Quaisquer modificações no objeto serão refletidas em todas as referências ao bean. 
+- **O escopo singleton é o valor padrão se nenhum outro escopo for especificado**.
 
-### 1 - Utilizando o JogadorController (Atividade 1)
+- Tarefa de casa: pesquisar sobre Inversão de Controle e Injeção de Dependência
 
-##### criar a rota abaixo:
+### Layers 
 
-- /jogador/listar/todos
+<img src="https://static.javatpoint.com/springboot/images/spring-boot-architecture2.png">
 
-1. Utilize o método **findAll()** para recuperar todos os jogadores
-2. Adicione o HTML abaixo na sua página:
+<img src="https://anchormen.nl/wp-content/uploads/2018/07/implementation-1.png">
 
-```html
-<div>
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			<div class="container-fluid">
-		    <a class="navbar-brand" href="#">Fuctura</a>
-		    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-		      <div class="navbar-nav">
-		        <a class="nav-link active" aria-current="page" href="#">Home</a>
-		        <a class="nav-link" href="#">Cadastrar</a>
-		        <a class="nav-link" href="#">Listar</a>
-                <a class="nav-link" href="#">Atualizar</a>
-                <a class="nav-link" href="#">Excluir</a>
-		      </div>
-		    </div>
-		  </div>
-		</nav>
-	</div>
-	<div class="container">
-		<div class="row">
-			<div class="col col-md-3" th:each="jogador : ${jogadores}">
-				<div>
-					<p>Nome: <span th:text=${jogador.nome}>???</span></p>
-					<p>Idade:<span th:text=${jogador.idade}>???</span></p>
-					<p>Altura:<span>???</span></p>
-					<p>Peso:<span>???</span></p>
-					<img th:src=${jogador.img}> 
-				</div>
-			</div>
-		</div>
-	</div>
-```
+### Spring Sterotypes Annotations
 
-### 2 - Pesquise e estude sobre (não precisa entregar): 
-- th:each
-- formulários HTML
-- Métodos HTTP
+- @Controller: especificamos uma classe com @Controller para indicar que eles são **front controllers** e responsáveis por lidar com solicitações de usuários e retornar a resposta apropriada;
 
-### 3 - Entrega da atividade:
-- Prazo: 26/04/22 (23:59)
-- Formas de entrega: **GitHub** ou **Google Drive**
-- 1 Ponto extra será dado para os alunos que enviar via Github
+- @Service: especificamos uma classe com @Service para indicar que eles estão mantendo a lógica de negócios. Além de ser utilizada na camada de serviço (regra de negócio), não há outro uso especial para esta anotação. As classes de utilitários podem ser marcadas como classes de serviço;
+ 
+- @Repository - Utilizada para a camada de persistência. Normalmente anotamos classes que representam um DAO, Repositório etc;
+
+- @Component é uma anotação de **nível de classe**. É usado para denotar uma classe como um Componente. Podemos usar @Component para marcar os beans como componentes gerenciados do Spring. E marcar classes que não se enquadrou em nenhum dos outros *sterotypes*;
+
+<img src="https://media.geeksforgeeks.org/wp-content/uploads/20211129123743/SpringComponentAnnotations.jpg">
+
+### Criando Beans
+
+- No Spring, os objetos que formam a espinha dorsal do seu aplicativo e que são gerenciados pelo contêiner Spring IoC são chamados de beans. Um bean é um objeto que é instanciado, montado e gerenciado por um contêiner Spring IoC. 
+
+- @Configuration: podemos utilizá-lo para declarar 1 ou mais **Bean**.
+
+- @Bean: informa que um método produz um bean para ser gerenciado pelo contêiner Spring.
+
+### Boas Práticas com Injeção de Dependências
+
+As melhores práticas para injeção de dependência são utilizar interfaces, construtores e propriedades finais.
