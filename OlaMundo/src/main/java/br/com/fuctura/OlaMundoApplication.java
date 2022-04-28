@@ -22,7 +22,6 @@ public class OlaMundoApplication {
 	}
 	
 	@Bean
-	
 	public Jogador getBean() {
 		Jogador j1 = new Jogador("Sou um Bean");
 		return j1;

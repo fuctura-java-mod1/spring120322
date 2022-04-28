@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 
 import br.com.fuctura.model.Jogador;
 import br.com.fuctura.repository.JogadorRepository;
@@ -43,9 +44,28 @@ public class JogadorController {
 		return "/jogador/listar"; 
 	}
 	
+	//localhost:9080/jogador/cadastrar
+	@GetMapping("/jogador/cadastrar")
 	public String cadastrar(){
 		return "/jogador/cadastrar";
+		//templates/jogador/cadastrar.html
 	}
+	
+	@PostMapping("/jogador/cadastrar")
+	public String cadastrar(String nome, int idade) {
+		//este método vai receber os dados do formulario
+		System.out.println("nome:" + nome);
+		System.out.println("idade:" + idade);
+		
+		Jogador j = new Jogador(nome);
+		j.setIdade(idade);
+		
+		//salvar no banco de dados
+		repo.save(j);
+
+		return "/jogador/cadastrar";
+	}
+	
 	
 	public String remover() {
 		return "/jogador/remover";
