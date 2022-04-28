@@ -10,11 +10,6 @@ import javax.persistence.Table;
 @Table(name = "jogador")
 public class Jogador {
 	
-	public Jogador(String nome) {
-		System.out.println("Construindo uma instancia do Jogador: " + nome);
-		this.nome = nome;
-	}
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
@@ -25,6 +20,13 @@ public class Jogador {
 	private double peso;
 	private String img;
 	
+	
+	//Revisar construtores Java  Mod 1
+	public Jogador(String nome) {
+		this.nome = nome; //eu suou um bean
+		System.out.println("Instanciei um jogador");
+	}
+
 	public Long getId() {
 		return id;
 	}

@@ -1,10 +1,10 @@
 package br.com.fuctura;
 
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Primary;
 
 import br.com.fuctura.model.Jogador;
 
@@ -22,9 +22,16 @@ public class OlaMundoApplication {
 	}
 	
 	@Bean
-	public Jogador getBean() {
-		Jogador j = new Jogador("Sou um Bean");
-		return j;
-	}
 	
+	public Jogador getBean() {
+		Jogador j1 = new Jogador("Sou um Bean");
+		return j1;
+	}
+
+	@Bean
+	@Primary
+	public Jogador getBean2() {
+		Jogador j2 = new Jogador("Sou um Bean2");
+		return j2;
+	}
 }
