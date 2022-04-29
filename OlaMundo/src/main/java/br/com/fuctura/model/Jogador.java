@@ -27,6 +27,10 @@ public class Jogador {
 		System.out.println("Instanciei um jogador");
 	}
 
+	public Jogador() {
+		// TODO Auto-generated constructor stub
+	}
+
 	public Long getId() {
 		return id;
 	}
