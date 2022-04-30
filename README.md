@@ -102,27 +102,29 @@ Utilize o controlador **JogadorController** e **cadastrar.html** que criamos dur
 
 #### Exemplo de um drown-down list:
 
-```<div>
+```
+<div>
 <select name="select">
   <option value="valor1">Valor 1</option>
   <option value="valor2" selected>Valor 2</option>
   <option value="valor3">Valor 3</option>
-</select>
-</div>```
+</select></div>
+```
+
 
 #### Representação das posições de jogadores em campo de futebol:
 
-- G: Goleiro; 
-- Z: Zagueiro; 
-- L: Lateral; 
-- V: Volante; 
-- A: Ala; 
-- M: Meio Campo; 
-- MC: Meia central; 
-- ML: Meia Lateral; 
-- MA: Meia Atacante; 
-- P: Ponta; 
-- AT: Atacante. 
+- G: Goleiro;
+- Z: Zagueiro;
+- L: Lateral;
+- V: Volante;
+- A: Ala;
+- M: Meio Campo;
+- MC: Meia central;
+- ML: Meia Lateral;
+- MA: Meia Atacante;
+- P: Ponta;
+- AT: Atacante.
 
 <img src="https://www.researchgate.net/profile/Milton-Erthal-2/publication/326353906/figure/fig1/AS:647595860963329@1531410293471/Figura-1-Representacao-das-posicoes-de-jogadores-em-campo-de-futebol-G-Goleiro-Z.png">
 
