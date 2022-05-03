@@ -9,15 +9,18 @@
 	<div>
 		<form action="/v1/jogador/cadastrar" method="post">
 			<label for="idade">Idade</label>
-			<input type="text" id="idade">
+			<input type="text" id="idade" name="idade">
 			
 			<label for="nome">Nome</label>
-			<input type="text" id="nome">
+			<input type="text" id="nome" name="nome">
+			
+			<label for="nome">Altura</label>
+			<input type="text" name="altura">
 		
-			<select name="select">
-			  <option value="valor1">Atacante</option>
-			  <option value="valor2" selected>Meio de Campo</option>
-			  <option value="valor3">Defensor</option>
+			<select name="posicao">
+			  <option value="AT">Atacante</option>
+			  <option value="M" selected>Meio de Campo</option>
+			  <option value="Z">Defensor</option>
 			</select>			
 						 
 			<input type="submit" value="Enviar">
