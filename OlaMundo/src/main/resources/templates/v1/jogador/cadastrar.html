@@ -18,9 +18,7 @@
 			<input type="text" name="altura">
 		
 			<select name="posicao">
-			  <option value="AT">Atacante</option>
-			  <option value="M" selected>Meio de Campo</option>
-			  <option value="Z">Defensor</option>
+			  <option th:each="p : ${posicoes}" th:value="${p.id}"  th:text="${p.descricao}">Atacante</option>
 			</select>			
 						 
 			<input type="submit" value="Enviar">

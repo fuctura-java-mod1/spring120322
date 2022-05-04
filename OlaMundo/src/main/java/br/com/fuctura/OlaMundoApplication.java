@@ -68,7 +68,7 @@ public class OlaMundoApplication {
 			p1.setDescricao("Atacante");
 			
 			Posicao p2 = new Posicao();	
-			p1.setDescricao("Zagueiro");
+			p2.setDescricao("Zagueiro");
 			
 			repo.save(p1);
 			repo.save(p2);
