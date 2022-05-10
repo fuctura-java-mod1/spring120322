@@ -17,4 +17,6 @@ public class Clube {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	private String nome;
+	private Integer capacidade;
+	private String dtCriacao;
 }
