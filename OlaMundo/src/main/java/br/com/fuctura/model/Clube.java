@@ -8,9 +8,10 @@ import javax.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
 
-@Entity
+
 @Getter
 @Setter
+@Entity
 public class Clube {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)

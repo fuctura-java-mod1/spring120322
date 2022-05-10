@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Salvar Clube</title>
+</head>
+<body>
+	<div th:each="clube : {$clubes}">
+		<p th:text=${clube.nome}/>
+	</div>
+</body>
+</html>
