@@ -18,5 +18,5 @@ public class Clube {
 	private Long id;
 	private String nome;
 	private Integer capacidade;
-	private String dtCriacao;
+	private String dataFundacao;
 }

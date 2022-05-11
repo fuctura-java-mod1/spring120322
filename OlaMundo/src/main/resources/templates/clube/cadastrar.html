@@ -9,12 +9,12 @@
 	<div th:if="${userMessage}" th:utext="${userMessage}"></div>
 
 	<div>
-		<form th:action="@{/clube/cadastrar}" method="post">
+		<form th:action="@{/clube/salvar}" method="post">
 			<div>
 				Nome: <input name="nome" />
 			</div>
 			<div>
-				Data de Fundação: <input name="dataFundacao" />
+				Data de Fundação: <input type="date" name="dataFundacao" />
 			</div>
 			<div>
 				<input type="submit" value="Salvar"/>
